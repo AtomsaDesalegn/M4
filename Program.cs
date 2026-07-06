@@ -6,10 +6,14 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
+// First(outer wrapper) middleware
+app.UseMiddleware<RequestLoggingMiddleware>();
+
 // TODO 1: Register routing in the pipeline where it belongs for your app.
 app.UseRouting();
 
 // TODO 2: Register authentication and authorization in the pipeline
+app.UseStatusCodePages();
 app.UseAuthentication();
 app.UseAuthorization();
 
