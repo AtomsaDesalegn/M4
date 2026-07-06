@@ -26,3 +26,4 @@ C:\Users\user\OneDrive\Desktop\M4\Tmsapi\obj\Debug\net10.0\refint\TmsApi.dll
 C:\Users\user\OneDrive\Desktop\M4\Tmsapi\obj\Debug\net10.0\TmsApi.pdb
 C:\Users\user\OneDrive\Desktop\M4\Tmsapi\obj\Debug\net10.0\TmsApi.genruntimeconfig.cache
 C:\Users\user\OneDrive\Desktop\M4\Tmsapi\obj\Debug\net10.0\ref\TmsApi.dll
+C:\Users\user\OneDrive\Desktop\M4\Tmsapi\obj\Debug\net10.0\TmsApi.sourcelink.json
