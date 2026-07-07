@@ -2,9 +2,9 @@
 public interface IEnrollmentService
 {
     Task<EnrollmentRecord> EnrollAsync(string studentId, string courseId);
-    Task<EnrollmentRecord?> GetbyId(string id);
+    Task<EnrollmentRecord?> GetByIdAsync(string id);
     Task<IReadOnlyList<EnrollmentRecord>> GetAllAsync();
-    Task<bool>DeleteAsync(string id)
+    Task<bool> DeleteAsync(string id);
 };
 
 public class EnrollmentService : IEnrollmentService
@@ -25,9 +25,11 @@ public class EnrollmentService : IEnrollmentService
         return Task.FromResult(record);
     }
 
-    public Task<EnrollmentRecord?> GetById(string id)
+
+    public Task<EnrollmentRecord?> GetByIdAsync(string id)
     {
-        _store.TryGetValue(id, out var record);
+        var record = _store.GetValueOrDefault(id);
+        
         return Task.FromResult(record);
     }
 
@@ -44,4 +46,4 @@ public class EnrollmentService : IEnrollmentService
     }
 }
 
-public record EnrollmentRecord(string id, string studentId, string courseId, DateTime EnrolledAt)
+public record EnrollmentRecord(string id, string studentId, string courseId, DateTime EnrolledAt);
