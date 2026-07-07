@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\OneDrive\\Desktop\\M4\\Tmsapi\\TmsApi.csproj": {}
+    "C:\\Users\\user\\OneDrive\\Desktop\\M4\\TmsApi\\TmsApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\OneDrive\\Desktop\\M4\\Tmsapi\\TmsApi.csproj": {
+    "C:\\Users\\user\\OneDrive\\Desktop\\M4\\TmsApi\\TmsApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Desktop\\M4\\Tmsapi\\TmsApi.csproj",
+        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Desktop\\M4\\TmsApi\\TmsApi.csproj",
         "projectName": "TmsApi",
-        "projectPath": "C:\\Users\\user\\OneDrive\\Desktop\\M4\\Tmsapi\\TmsApi.csproj",
+        "projectPath": "C:\\Users\\user\\OneDrive\\Desktop\\M4\\TmsApi\\TmsApi.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\Desktop\\M4\\Tmsapi\\obj\\",
+        "outputPath": "C:\\Users\\user\\OneDrive\\Desktop\\M4\\TmsApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
