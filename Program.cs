@@ -5,7 +5,12 @@ builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
 
 builder.Services.AddSingleton<EnrollmentWorker>();
-builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
+builder.Services.AddSingleton<IEnrollmentService, EnrollmentService>();
+
+builder.Services.AddOptions<PaymentOptions>()
+    .BindConfiguration("Payments")
+    .ValidateDataAnnotations()
+    .ValidateOnStart();
 
 var app = builder.Build();
 
@@ -21,6 +26,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 // TODO 3: Map GET /api/assessments/results with the same response body as the starter, but require authorization for that route.
+
 app.MapGet("/api/assessments/results", () => Results.Ok(new
 {
     courseCode = "CS-101",
@@ -28,4 +34,11 @@ app.MapGet("/api/assessments/results", () => Results.Ok(new
     letterGrade = "A"
 })).RequireAuthorization();
 
+app.MapPost("/api/enrollments", async (RequestData data, IEnrollmentService enrollmentService) =>
+{
+    var record = await enrollmentService.EnrollAsync(data.studentId, data.courseId);
+    return Results.Ok(record);
+});
+
 app.Run();
+public record RequestData(string studentId, string courseId);
